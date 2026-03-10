@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta CNPJ Profissional</title>
-    <!-- Ligação com o arquivo CSS externo -->
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Previsão do Tempo 🌤️</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Consulta de Empresa</h1>
+        <h1>ClimaTempo App</h1>
         
-        <!-- Aceita máscaras como 27.865.757/0001-02 -->
-        <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00" maxlength="18">
+        <!-- Campo de Pesquisa -->
+        <input type="text" id="cidadeInput" placeholder="Digite o nome da cidade..." autocomplete="off">
         
-        <button onclick="buscarCNPJ()">Consultar CNPJ</button>
+        <!-- Botão de Busca -->
+        <button onclick="buscarClima()">Buscar Cidade</button>
         
-        <!-- Local onde os resultados serão renderizados -->
-        <div id="resultado"></div>
+        <!-- Div para mostrar a Ficha de Clima -->
+        <div id="resultado" class="hidden"></div>
+
+        <!-- Div para exibir erros -->
+        <div id="erro" class="hidden"></div>
     </div>
 
-    <!-- Ligação com o arquivo JavaScript externo -->
+    <!-- Script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
